@@ -9,10 +9,6 @@ namespace DotnetCoreORMDemo.Models
         public DbSet<Order> Orders { get; set; }
         public DbSet<WritableRow> WritableRows { get; set; }
 
-        public CustomerManagementContext()
-        {
-        }
-
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
