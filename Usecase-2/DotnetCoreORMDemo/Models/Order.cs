@@ -18,5 +18,26 @@ namespace DotnetCoreORMDemo.Models
         public string shipRegion { get; set; }
         public string shipPostalCode { get; set; }
         public string shipCountry { get; set; }
+
+        public override string ToString()
+        {
+            string cr = Environment.NewLine;
+
+            return
+                "OrderID        : " + orderID + cr +
+                "CustomerID     : " + customerID + cr +
+                "EmployeeID     : " + employeeID + cr +
+                "OrderDate      : " + orderDate + cr +
+                "RequiredDate   : " + requiredDate + cr +
+                "ShippedDate    : " +shippedDate + cr +
+                "ShipVia        : " +shipVia + cr +
+                "Freight        : " + freight + cr +
+                "ShipName       : " + shipName + cr +
+                "ShipAddress    : " +shipAddress + cr +
+                "ShipCity       : " + shipCity + cr +
+                "ShipRegion     : " +shipRegion + cr +
+                "ShipPostalCode : " + shipPostalCode + cr +
+                "ShipCountry    : " + shipCountry;
+        }
     }
 }

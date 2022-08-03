@@ -15,10 +15,25 @@ namespace DotnetCoreORMDemo.DatabaseLayer
 
             using (CustomerManagementContext context = new CustomerManagementContext())
             {
-                customerIDs = context.Customers.Select(x => x.CustomerID).ToList();
+                //customerIDs = context.Customers.Select(x => x.CustomerID).ToList();
+
+                customerIDs = (from p in context.Customers
+                               select p.CustomerID).ToList(); // Linq query
             }
 
             return customerIDs;
         }
+
+        /*
+            public static List<Order> GetOrdersByCustomerID(string customerID)
+            {
+                List<Order> orders = new List<Order>();
+                using (CustomerManagementContext context = new CustomerManagementContext())
+                {
+                    orders = context.Orders.Select(x => x.CustomerID).ToList().;
+                }
+                return orders;
+            }
+        */
     }
 }

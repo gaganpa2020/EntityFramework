@@ -49,8 +49,8 @@ namespace DotnetCoreORMDemo
                 //// Perform action based on the selection
                 if (option.Value == 1)
                     CustomerManager.ListAllCustomerIDs();
-                //else if (option.Value == 2)
-                //    ListOrdersByCustomerID();
+                else if (option.Value == 2)
+                    OrderManager.ListOrdersByCustomerID();
                 //else if (option.Value == 3)
                 //    CreateNewRow();
                 //else if (option.Value == 4)
