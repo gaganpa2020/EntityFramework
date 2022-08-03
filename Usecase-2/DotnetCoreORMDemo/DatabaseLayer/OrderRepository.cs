@@ -9,6 +9,7 @@ namespace DotnetCoreORMDemo.DatabaseLayer
 {
     public class OrderRepository
     {
+        //This method is used to get the order using customer id
         public static List<Order> GetOrdersByCustomerID(string customerID)
         {
             List<Order> orders = new List<Order>();
